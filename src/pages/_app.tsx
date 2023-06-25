@@ -12,7 +12,7 @@ export default function App({
   return (
     <ThemeProvider theme={theme}>
       <Head>
-        <title>Localize Pet 🧡</title>
+        <title>BNHA Hero Legacy</title>
         <meta
           name="description"
           content="A simple project starter to work with TypeScript, React, NextJS and Styled Components"

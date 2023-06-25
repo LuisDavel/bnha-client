@@ -1,11 +1,6 @@
 import styled, { css } from 'styled-components';
 import theme from 'styles/theme';
 
-// type Props = {
-//   color: boolean
-//   theme: Theme
-// }
-
 export const Wrapper = styled.section`
   width: fit-content;
   height: 95%;
