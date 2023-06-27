@@ -17,6 +17,10 @@ const Sidebar = () => {
     {
       name: 'Patch Notes',
       link: './patch-notes'
+    },
+    {
+      name: 'Cadastro de Patch Notes',
+      link: './cadastro-patch-notes'
     }
   ];
   // console.log(router.pathname)

@@ -32,9 +32,10 @@ export const As = styled.a`
     color: ${color ? theme.colors.secondary : theme.colors.terciary};
     text-decoration: none;
     font-weight: ${theme.font.bold};
-
+    transition: 0.5s all;
     :hover {
       color: ${theme.colors.secondary};
+      transition-delay: 0s;
     }
   `}
 `;

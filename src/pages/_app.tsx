@@ -3,25 +3,30 @@ import Head from 'next/head';
 import { ThemeProvider } from 'styled-components';
 import GlobalStyles from 'styles/global';
 import theme from 'styles/theme';
-import { SessionProvider } from 'next-auth/react';
+import LandingPage from 'template/Ladingpage';
+import { QueryClient, QueryClientProvider } from 'react-query';
 
 export default function App({
   Component,
-  pageProps: { session, ...pageProps }
+  pageProps: { ...pageProps }
 }: AppProps) {
+  const queryClient = new QueryClient();
+
   return (
     <ThemeProvider theme={theme}>
       <Head>
         <title>BNHA Hero Legacy</title>
         <meta
           name="description"
-          content="A simple project starter to work with TypeScript, React, NextJS and Styled Components"
+          content="Site criado para fins de auxiliar na integração de novos player o ao BNHA Hero's Legacy"
         />
       </Head>
       <GlobalStyles />
-      <SessionProvider session={session}>
-        <Component {...pageProps} />
-      </SessionProvider>
+      <LandingPage>
+        <QueryClientProvider client={queryClient}>
+          <Component {...pageProps} />
+        </QueryClientProvider>
+      </LandingPage>
     </ThemeProvider>
   );
 }
