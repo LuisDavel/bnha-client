@@ -10,7 +10,7 @@ export default function App({
   pageProps: { session, ...pageProps }
 }: AppProps) {
   return (
-    <ThemeProvider theme={theme}>
+     <ThemeProvider theme={theme}>
       <Head>
         <title>BNHA Hero Legacy</title>
         <meta
@@ -20,7 +20,9 @@ export default function App({
       </Head>
       <GlobalStyles />
       <SessionProvider session={session}>
-        <Component {...pageProps} />
+        <LandingPage>
+          <Component {...pageProps} />
+        </LandingPage>
       </SessionProvider>
     </ThemeProvider>
   );
